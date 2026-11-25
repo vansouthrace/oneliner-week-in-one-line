@@ -1,7 +1,8 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const ENTRY = "Five bounties shipped, one build broke at 2am, and the grill still owes me a patty.";
+// One line summing up the week, at most 100 characters.
+const line =
+  "Broke prod Monday, fixed it Tuesday, shipped nothing all week, still got praised on Friday.";
 
-const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
-mkdirSync(out, { recursive: true });
-writeFileSync(`${out}/entry.txt`, ENTRY);
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", line);
